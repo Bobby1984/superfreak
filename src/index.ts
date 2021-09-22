@@ -4,8 +4,13 @@ const app = express();
 const port = 8080;
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Hello Liebling");
 });
+
+app.get("/status", (req, res) => {
+    res.send("OK");
+});
+
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
