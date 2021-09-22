@@ -1,18 +1,23 @@
 import express from "express";
 
-const app = express();
-const port = 8080;
+const server = express();
+const port = 8000;
 
-app.get("/", (req, res) => {
+
+server.use(express.json());
+
+server.get("/", (req, res) => {
     res.send("Hello World");
 });
 
-app.get("/status", (req, res) => {
-    res.send("OK");
+
+server.post("/", (req, res) => {
+    const body = JSON.stringify(req.body);
+    res.send(`You send: ${body}`);
 });
 
 
-app.listen(port, () => {
+server.listen(port, () => {
     // tslint:disable-next-line:no-console
     console.log(`Server started on localhost:${port}`);
 });
