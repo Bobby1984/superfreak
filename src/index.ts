@@ -9,5 +9,5 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
-    console.log(`Server started on Pupsi localhost:${port}`);
+    console.log(`Server started on localhost:${port}`);
 });
